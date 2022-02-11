@@ -6,6 +6,9 @@ let kid;
 let arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 let arr2 = [];
 let target = [];
+function togglePopup() {
+	document.getElementById('popup-1').classList.toggle("active");
+}
 function setup() {
 	createCanvas(windowWidth, 3 * windowHeight);
 	background(100);
@@ -112,8 +115,12 @@ function mousePressed() {
 	}
 }
 function draw() {
+	cursor('auto');
 	nodes.forEach((ele) => {
 		ele.show();
+		if (dist(mouseX, mouseY, ele.x, ele.y) < ele.r / 2) {
+			cursor('pointer');
+		}
 	});
 	drawEdges();
 	fill(255, 0, 0);
@@ -121,5 +128,5 @@ function draw() {
 	text("visited", 45, 35);
 	fill(0, 255, 0);
 	rect(10, 45, 25, 25);
-	text("Wahed klee la5er", 45, 65);
+	text("🐺🍴🐐 or 🐐🍴🥗", 45, 65);
 }

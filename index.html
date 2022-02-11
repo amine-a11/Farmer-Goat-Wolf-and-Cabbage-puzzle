@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Probleme_du_fermier</title>
+		<link rel="stylesheet" href="style.css">
+		<title>name</title>
 		<!-- <script src="libraries/p5.js"></script> -->
 		<!-- <script src="libraries/p5.sound.js"></script> -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
@@ -19,5 +20,13 @@
 			}
 		</style>
 	</head>
-	<body></body>
+	<body>
+		<div class="popup" id="popup-1">
+			<div class="overlay"></div>
+			<div class="content">
+				<div class="close-btn" onclick="togglePopup()">&times;</div>
+				<p>By clicking on the <span style="color:blue">blue</span> node ( the mother node) you will be able to generate the child nodes</p>
+			</div>
+		</div>
+	</body>
 </html>
